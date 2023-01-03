@@ -17,6 +17,7 @@ if __name__ == "__main__":
 ```
 
 Next, I decided it was (prob) easier to code moves into FEN style and letting the system show and display FEN. I tried to code an FEN reader to import into this ```console_board``` array. To be fair, python classes are way to finicky for my liking, but I finally got something to (barely) work:
+
 ```
 class FEN:
     def __init__(self, FEN):
@@ -62,14 +63,13 @@ if __name__ == "__main__":
     current_FEN = FEN("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR")
     current_FEN.FEN_to_BOARD(current_FEN.reader(current_FEN.FEN))
 ```
-~~~ RANT START ~~~
+
 This was 2 hours that I spent fixing bugs because I don't know how to code... Like how do I get this: 
 ```FENPROCESS = [['r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'], ['p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [], ['P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'], ['R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R']]```
 and
 ``` FENPROCESS = [['r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'], ['p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' '], ['P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'], ['R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R']]```
 
 THESE ERRORS DON'T EVEN MAKE SENSE AND I THOUGHT THE PROBLEMS WOULD BE IN THE UI AND UX :<
-~~~ RANT END ~~~
 
 And in Classic Rin Fassion I Cheesed my way through the right answer. I suppose there is an correct way to figure this out, but I've already looked at this mess for a few hours, I'm going to leave that as an problem for future me.
 

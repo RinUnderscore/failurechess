@@ -147,3 +147,6 @@ if __name__ == "__main__":
 ```
 
 This looks much better to read now.
+
+Now I'm going to take a break from looking down all these lines of text to start generating the graphics (which can be worse lol)
+Wait, I have a lot of bugs. God this is bad...

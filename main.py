@@ -1,5 +1,7 @@
+import pygame, os, time, random
+
 # Create Board on Console
-def CreateConsoleBoard():
+def GenerateConsoleBoard():
     global console_board
     console_board = []
     for a in range(63):
@@ -15,7 +17,7 @@ class FEN:
         
         # Split FEN into 8 String
         FEN = FEN.split("/", 7)
-        print(f"My FEN: {FEN}\n\n")
+        print(f"My FEN: {FEN}")
         
         FEN_process = []
         SPACE_process = []
@@ -32,7 +34,6 @@ class FEN:
             
             # if FEN is int, add 8 spaces to 5 lines
             if isinstance(FEN[b], int):
-                print(f"number of spaces: {FEN[b]}")
                 for c in range(FEN[b]+4):
                     SPACE_process.append(" ")
                     if len(SPACE_process) == 8:
@@ -45,7 +46,7 @@ class FEN:
         del FEN_process[6]
 
         # Return Debug Failsafe
-        print(f"\n\n\n\n\n\n FENPROCESS = {FEN_process}")
+        # print(f"\n FENPROCESS = {FEN_process}")
         
         return FEN_process
         
@@ -60,8 +61,9 @@ class FEN:
         print(f"list of my board: {console_board}, length = {len(console_board)}")
 
 if __name__ == "__main__":
-    CreateConsoleBoard()
+    GenerateConsoleBoard()
     
     # Create and Read FEN
     current_FEN = FEN("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR")
     current_FEN.FEN_to_BOARD(current_FEN.reader(current_FEN.FEN))
+
